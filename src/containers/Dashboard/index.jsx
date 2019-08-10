@@ -1,19 +1,20 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Divider, Dropdown, Icon } from "semantic-ui-react";
 import Header from "./Header";
 import Table from "./Table";
 
 class Dashboard extends Component {
+  handleLogout = () => {
+    window.localStorage.removeItem("token");
+    window.location.reload();
+  };
   render() {
     const trigger = (
       <span>
-        <Icon name="user" /> Hi Dave
+        <Icon name="user" /> Hi Hossam
       </span>
     );
-
-    const options = [{ key: "sign-out", text: "Sign Out" }];
 
     return (
       <>
@@ -27,7 +28,13 @@ class Dashboard extends Component {
             paddingRight: "20px"
           }}
         >
-          <Dropdown trigger={trigger} options={options} />
+          <Dropdown trigger={trigger}>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={this.handleLogout}>
+                <span>Logout</span>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
         <Divider hidden />
         <Header />

@@ -2,8 +2,10 @@
 import React, { Component } from "react";
 import { Divider, Form, Button, Header } from "semantic-ui-react";
 import { Formik } from "formik";
-import { Link } from "react-router-dom";
+import { fire } from "../../firebase";
+import { withRouter, Redirect } from "react-router-dom";
 import * as yup from "yup";
+import notify from "../../components/Toast";
 import "./signin.css";
 
 const schema = yup.object({
@@ -16,7 +18,16 @@ const schema = yup.object({
 
 class LoginForm extends Component {
   handleOnSubmit = values => {
-    console.log(values);
+    console.log(this.props) ||
+      fire
+        .auth()
+        .signInWithEmailAndPassword(values.email, values.password)
+        .then(u => {
+          localStorage.setItem("token", u.user.uid);
+          notify("Login successful!", "success");
+          return this.props.history.push("/dashboard");
+        })
+        .catch(err => notify("Wrong username or password!", "warning"));
   };
 
   render() {
@@ -62,6 +73,7 @@ class LoginForm extends Component {
                 <label>Password</label>
                 <Form.Field controlId="password-control">
                   <Form.Input
+                    type="password"
                     placeholder="Password*"
                     name="password"
                     value={values.password}
@@ -90,4 +102,4 @@ class LoginForm extends Component {
     );
   }
 }
-export default LoginForm;
+export default withRouter(LoginForm);
