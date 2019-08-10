@@ -31,7 +31,7 @@ class UserModal extends Component {
               </Grid.Column>
               <Grid.Column width={6}>
                 <span>Facematch Factor</span>
-                <Progress percent={15} color="blue" />
+                <Progress percent={15} color="blue" indicating />
                 <div>
                   <div>
                     <span style={{ marginRight: "30px" }}>
@@ -39,15 +39,15 @@ class UserModal extends Component {
                     </span>
                     <Label>Premium</Label>
                   </div>
-                  <Progress percent={10} color="blue" />
+                  <Progress percent={10} color="blue" indicating />
                 </div>
               </Grid.Column>
               <Grid.Column width={2} />
               <Grid.Column width={6}>
                 <span>Facematch Factor</span>
-                <Progress percent={15} color="blue" />
+                <Progress percent={50} color="blue" indicating />
                 <span>ID Authenticity Factory</span>
-                <Progress percent={10} color="blue" />
+                <Progress percent={70} color="blue" indicating />
               </Grid.Column>
             </Grid>
             <List

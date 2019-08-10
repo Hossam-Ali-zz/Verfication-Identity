@@ -46,6 +46,23 @@ class DashboardHeader extends Component {
                 </Button>
               </Table.Cell>
             </Table.Row>
+            <Table.Row>
+              <Table.Cell>48</Table.Cell>
+              <Table.Cell>About 16 hours</Table.Cell>
+              <Table.Cell>N/A</Table.Cell>
+              <Table.Cell>N/A</Table.Cell>
+              <Table.Cell>Berlin, DE</Table.Cell>
+              <Table.Cell>Passport</Table.Cell>
+              <Table.Cell>24%</Table.Cell>
+              <Table.Cell>
+                <Button
+                  color="blue"
+                  onClick={() => this.setState({ isModal: true })}
+                >
+                  Check now
+                </Button>
+              </Table.Cell>
+            </Table.Row>
           </Table.Body>
         </Table>
         {this.state.isModal && (
