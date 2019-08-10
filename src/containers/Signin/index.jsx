@@ -1,8 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
-import RightSide from "./rightSide";
+import LeftSide from "./leftSide";
 import LoginForm from "./loginForm";
 import "./signin.css";
 
@@ -12,7 +11,7 @@ class Signin extends Component {
       <>
         <Grid style={{ height: "100%" }}>
           <Grid.Column width={9} style={{ backgroundColor: "blue" }}>
-            <RightSide />
+            <LeftSide />
           </Grid.Column>
           <Grid.Column
             width={7}

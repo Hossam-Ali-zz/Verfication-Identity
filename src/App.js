@@ -1,11 +1,11 @@
 import React from "react";
-import Signin from "./containers/Signin";
+import PagesRoutes from "./Routes";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Signin />
+      <PagesRoutes />
     </div>
   );
 }

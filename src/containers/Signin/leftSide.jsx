@@ -4,10 +4,10 @@ import { Image, Divider } from "semantic-ui-react";
 import check from "./checkmark_white.png";
 import "./signin.css";
 
-class RightSide extends Component {
+class LeftSide extends Component {
   render() {
     return (
-      <div className="right-side-div">
+      <div className="left-side-div">
         <div className="checks">
           <Image src={check} className="check-image" />
           Bank-level Security
@@ -26,4 +26,4 @@ class RightSide extends Component {
     );
   }
 }
-export default RightSide;
+export default LeftSide;
