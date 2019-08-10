@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Divider, Form, Button, Header } from "semantic-ui-react";
 import { Formik } from "formik";
 import { fire } from "../../firebase";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import * as yup from "yup";
 import notify from "../../components/Toast";
 import "./signin.css";
@@ -17,18 +17,17 @@ const schema = yup.object({
 });
 
 class LoginForm extends Component {
-  handleOnSubmit = values => {
-    console.log(this.props) ||
-      fire
-        .auth()
-        .signInWithEmailAndPassword(values.email, values.password)
-        .then(u => {
-          localStorage.setItem("token", u.user.uid);
-          notify("Login successful!", "success");
-          return this.props.history.push("/dashboard");
-        })
-        .catch(err => notify("Wrong username or password!", "warning"));
-  };
+  async handleOnSubmit(values) {
+    await fire
+      .auth()
+      .signInWithEmailAndPassword(values.email, values.password)
+      .then(u => {
+        u && u.user && localStorage.setItem("token", u.user.uid);
+        notify("Login successful!", "success");
+        return this.props.history.push("/dashboard");
+      })
+      .catch(err => notify("Wrong username or password!", "warning"));
+  }
 
   render() {
     return (
