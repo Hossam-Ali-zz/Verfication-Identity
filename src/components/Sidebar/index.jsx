@@ -19,7 +19,7 @@ export default class SideBar extends Component {
           onClick={this.handleItemClick}
         >
           <Label style={{ backgroundColor: "#e8e4da" }}>
-            <span style={{ color: "blue" }}> 1</span>
+            <span style={{ color: "blue" }}> 3</span>
           </Label>
           Dashboard
         </Menu.Item>

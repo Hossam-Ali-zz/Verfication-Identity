@@ -8,19 +8,17 @@ import "./signin.css";
 class Signin extends Component {
   render() {
     return (
-      <>
-        <Grid style={{ height: "100%" }}>
-          <Grid.Column width={9} style={{ backgroundColor: "blue" }}>
-            <LeftSide />
-          </Grid.Column>
-          <Grid.Column
-            width={7}
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <LoginForm />
-          </Grid.Column>
-        </Grid>
-      </>
+      <Grid style={{ height: "100%", margin: 0 }}>
+        <Grid.Column width={9} style={{ backgroundColor: "blue" }}>
+          <LeftSide />
+        </Grid.Column>
+        <Grid.Column
+          width={7}
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <LoginForm />
+        </Grid.Column>
+      </Grid>
     );
   }
 }

@@ -15,14 +15,14 @@ class DashboardHeader extends Component {
             <Segment>
               <h4 className="card-title">Chnage from last 7 days</h4>
               <Grid columns="equal">
-                <Grid.Column>
+                <Grid.Column textAlign="left">
                   <div>
                     <span className="card-number">48</span>
                     <span>Total Authentications </span>
                   </div>
                   <Label style={{ color: "blue" }}>1 new</Label>
                 </Grid.Column>
-                <Grid.Column>
+                <Grid.Column textAlign="left">
                   <div>
                     <span className="card-number">62.3%</span>
                     <span>Total Trust Score </span>

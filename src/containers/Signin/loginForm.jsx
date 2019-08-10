@@ -16,8 +16,8 @@ const schema = yup.object({
 });
 
 class LoginForm extends Component {
-  async handleOnSubmit(values) {
-    await fire
+  handleOnSubmit(values) {
+    fire
       .auth()
       .signInWithEmailAndPassword(values.email, values.password)
       .then(u => {
@@ -53,7 +53,7 @@ class LoginForm extends Component {
                 Please login
               </Header>
               <Divider hidden />
-              <Form style={{ textAlign: "left" }}>
+              <Form onSubmit={handleSubmit} style={{ textAlign: "left" }}>
                 <label>Business Email</label>
                 <Form.Field controlId="email-control">
                   <Form.Input
@@ -88,7 +88,7 @@ class LoginForm extends Component {
                 </span>
                 <Divider hidden />
                 <div style={{ textAlign: "center" }}>
-                  <Button onClick={handleSubmit} type="submit" color="blue">
+                  <Button type="submit" color="blue">
                     Login
                   </Button>
                 </div>
