@@ -45,7 +45,7 @@ class DashboardHeader extends Component {
           </Table.Header>
 
           <Table.Body>
-            {(this.state.usersData && console.log(this.state.usersData)) ||
+            {this.state.usersData &&
               this.state.usersData.map(data => (
                 <Table.Row>
                   <Table.Cell>{data.id}</Table.Cell>
