@@ -36,3 +36,6 @@
 .ui.vertical.menu.fluid {
   height: 100%;
 }
+.ui.vertical.menu .item {
+  height: 8%;
+}

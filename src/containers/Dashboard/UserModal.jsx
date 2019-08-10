@@ -134,6 +134,7 @@ class UserModal extends Component {
         >
           <Modal.Content>
             <Tab
+              grid={{ paneWidth: 13, tabWidth: 3 }}
               menu={{ fluid: true, vertical: true, tabular: true }}
               panes={panes}
             />

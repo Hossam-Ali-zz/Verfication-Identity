@@ -13,7 +13,12 @@ export default class SideBar extends Component {
       <Menu
         vertical
         borderless
-        style={{ textAlign: "left", position: "fixed", height: "100%" }}
+        style={{
+          textAlign: "left",
+          position: "fixed",
+          height: "100%",
+          marginTop: "59px"
+        }}
       >
         <Menu.Item
           name="dashboard"
