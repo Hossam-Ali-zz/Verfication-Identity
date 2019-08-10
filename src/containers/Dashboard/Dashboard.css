@@ -39,3 +39,17 @@
 .ui.vertical.menu .item {
   height: 8%;
 }
+.table-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+.user-avatar {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #dededf;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
