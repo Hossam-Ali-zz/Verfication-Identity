@@ -131,9 +131,11 @@ class UserModal extends Component {
           closeIcon
           size="fullscreen"
           onClose={() => this.props.handleModal(false)}
+          style={{ minHeight: "890px" }}
         >
           <Modal.Content>
             <Tab
+              style={{ minHeight: "890px" }}
               grid={{ paneWidth: 13, tabWidth: 3 }}
               menu={{ fluid: true, vertical: true, tabular: true }}
               panes={panes}
