@@ -1,0 +1,24 @@
+.container {
+  margin-left: 17rem;
+  margin-right: 5rem;
+}
+.card-number {
+  display: block;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.card-title {
+  color: grey;
+  text-align: left;
+}
+.ui.circular.label,
+.ui.circular.labels .label {
+  min-width: unset;
+  min-height: unset;
+}
+
+.right-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
