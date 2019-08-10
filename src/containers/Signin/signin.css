@@ -1,0 +1,24 @@
+.right-side-div {
+  width: 20%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checks {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.check-image {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+.login-form {
+  width: 50%;
+  margin: 0 auto;
+}
