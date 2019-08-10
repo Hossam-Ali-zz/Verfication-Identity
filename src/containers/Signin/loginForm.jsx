@@ -1,4 +1,3 @@
-/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from "react";
 import { Divider, Form, Button, Header } from "semantic-ui-react";
 import { Formik } from "formik";
@@ -22,7 +21,7 @@ class LoginForm extends Component {
       .auth()
       .signInWithEmailAndPassword(values.email, values.password)
       .then(u => {
-        u && u.user && localStorage.setItem("token", u.user.uid);
+        localStorage.setItem("token", u.user.uid);
         notify("Login successful!", "success");
         return this.props.history.push("/dashboard");
       })
