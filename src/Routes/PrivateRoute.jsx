@@ -3,7 +3,6 @@ import { Redirect, Route } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const isLoggedIn = localStorage.getItem("token");
-  console.log(isLoggedIn);
   return (
     <Route
       {...rest}
