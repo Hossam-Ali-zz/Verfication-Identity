@@ -22,3 +22,17 @@
   justify-content: space-between;
   align-items: center;
 }
+.ui.table tr td {
+  border-top: unset;
+}
+.ui.progress:last-child {
+  margin: 1em 0 2.5em;
+}
+.ui.list .list > a.item:hover,
+.ui.list > a.item {
+  color: black;
+}
+.ui.menu.fluid,
+.ui.vertical.menu.fluid {
+  height: 100%;
+}
