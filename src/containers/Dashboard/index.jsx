@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Divider, Dropdown, Icon } from "semantic-ui-react";
 import Header from "./Header";
 import Table from "./Table";
+import "./Dashboard.css";
 
 class Dashboard extends Component {
   handleLogout = () => {
@@ -18,16 +19,7 @@ class Dashboard extends Component {
 
     return (
       <>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            borderBottom: "1px solid #dededf",
-            paddingBottom: "20px",
-            paddingTop: "20px",
-            paddingRight: "20px"
-          }}
-        >
+        <div className="user-avatar">
           <Dropdown trigger={trigger}>
             <Dropdown.Menu>
               <Dropdown.Item onClick={this.handleLogout}>

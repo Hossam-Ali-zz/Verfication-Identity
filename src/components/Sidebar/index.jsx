@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Input, Label, Menu } from "semantic-ui-react";
-
+import { Label, Menu } from "semantic-ui-react";
+import "./sidebar.css";
 export default class SideBar extends Component {
   state = { activeItem: "dashboard" };
 
@@ -10,16 +10,7 @@ export default class SideBar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Menu
-        vertical
-        borderless
-        style={{
-          textAlign: "left",
-          position: "fixed",
-          height: "100%",
-          marginTop: "59px"
-        }}
-      >
+      <Menu vertical borderless className="menu-sidebar">
         <Menu.Item
           name="dashboard"
           style={{

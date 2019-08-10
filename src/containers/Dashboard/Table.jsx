@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { Table, Button, Pagination, Icon, Label } from "semantic-ui-react";
 import UserModal from "./UserModal";
 import { firestore } from "../../firebase";
-import "./Header.css";
 
 class DashboardHeader extends Component {
   state = {
@@ -76,14 +75,7 @@ class DashboardHeader extends Component {
               ))}
           </Table.Body>
         </Table>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "10px",
-            left: "0",
-            right: 0
-          }}
-        >
+        <div className="table-pagination">
           <Pagination
             defaultActivePage={5}
             ellipsisItem={{

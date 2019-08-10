@@ -1,7 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from "react";
 import { Grid, Button, Segment, Divider, Label } from "semantic-ui-react";
-import "./Header.css";
 
 class DashboardHeader extends Component {
   render() {
