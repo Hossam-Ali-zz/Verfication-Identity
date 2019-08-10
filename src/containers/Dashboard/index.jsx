@@ -1,11 +1,47 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Grid } from "semantic-ui-react";
+import { Divider, Dropdown, Icon } from "semantic-ui-react";
+import Header from "./Header";
+import Table from "./Table";
 
 class Dashboard extends Component {
+  handleLogout = () => {
+    window.localStorage.removeItem("token");
+    window.location.reload();
+  };
   render() {
-    return <>asd</>;
+    const trigger = (
+      <span>
+        <Icon name="user" /> Hi Hossam
+      </span>
+    );
+
+    return (
+      <>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            borderBottom: "1px solid #dededf",
+            paddingBottom: "20px",
+            paddingTop: "20px",
+            paddingRight: "20px"
+          }}
+        >
+          <Dropdown trigger={trigger}>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={this.handleLogout}>
+                <span>Logout</span>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+        <Divider hidden />
+        <Header />
+        <Divider hidden section />
+        <Table />
+      </>
+    );
   }
 }
 export default Dashboard;
