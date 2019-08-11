@@ -12,6 +12,11 @@ Clone The repository, and install dependencies.
 Before creating yout .env file
 setup your firebase project and enable the email authentication from  <a href="https://console.firebase.google.com/u/0/"> firebase console </a>
 
+### `Credentials`
+```
+Email : Hossam-Ali@passbase.com
+Password: ThisIsAVerySecurePassword123
+```
 Create your .env file and change XXXXX to your values
 ```
 > cp .env.sample .env
