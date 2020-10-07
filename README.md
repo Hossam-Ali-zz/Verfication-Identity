@@ -23,6 +23,6 @@ Create your .env file and change XXXXX to your values
 ```
 ###  `Built With`
 + <a href="https://github.com/facebook/create-react-app">create-react-app</a> - tool to bootstrap a react project
-+ <a href="https://react.semantic-ui.com">semanticJS</a> - Modern front-end development framework
++ <a href="https://react.semantic-ui.com">semantic UI</a> - Modern front-end development framework
 + <a href="https://github.com/jaredpalmer/formik">formik</a> - lightweight form handling library
 + <a href="https://github.com/firebase/firebase-js-sdk">Firebase</a> - Firebase Javascript SDK
